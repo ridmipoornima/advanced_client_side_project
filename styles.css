@@ -75,12 +75,15 @@ a {
 .nav-menu {
     display: none; /* Hidden by default on small screens */
     position: absolute;
-    top: 120px;
+    top: 100px;
     right: 0;
     background-color: #333;
-    width: 100%; /* Full-width menu on small screens */
+    width: 10px; /* Full-width menu on small screens */
+    height: 100px;
     border-radius: 5px;
     z-index: 100;
+    max-height: 300px; /* Set a max height */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
 }
 
 /* Show the menu when the checkbox is checked */
@@ -103,8 +106,8 @@ a {
     color: #fff;
     text-decoration: none;
     display: block;
-    font-size: 30px; /* Increase the font size */
-    font-weight: 600; /* Make the font bold */
+    font-size: 20px; /* Increase the font size */
+    font-weight: 400; /* Make the font bold */
     transition: color 0.3s;
 }
 

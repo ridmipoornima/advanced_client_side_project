@@ -20,7 +20,12 @@
     display: flex;
     align-items: center;
 }
+.btn-all{
+    padding: 20px;
+}
 .btn{
+    background-color: transparent;
+    color: #fff;
     display: inline-block;
     padding: 10px 30px;
     background: #7cf03d;
@@ -34,9 +39,28 @@
 .btn:hover{
     background-color: transparent;
     color: #7cf03d;
-    box-shadow: none;
+    box-shadow:#fff;
+    
 }
-.home-info .btn-social .social a{
+.btn-two{
+    background-color: transparent;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 30px;
+    background:#ffae00;
+    border-radius: 40px;
+    box-shadow: 0 0 10px;
+    font-size: 16PX;
+    color: #1f242d;
+    font-weight: 600;
+    transition: 1s;
+}
+.btn-two:hover{
+    background-color: transparent;
+    color: #7cf03d;
+    box-shadow:#fff;
+}
+.home-info .social a{
     display: inline-flex;
     padding: 8px;
     border: 2px solid #7cf03d;
@@ -45,7 +69,7 @@
     color: #7cf03d;
     margin: 0 8px;
 }
-.home-info .btn-social .social a:hover{
+.home-info .social a:hover{
     background-color: #7cf03d;
     color: #1f242d;
     box-shadow: 0 0 10px #7cf03d;

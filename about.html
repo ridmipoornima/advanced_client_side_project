@@ -3,18 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aboute</title>
+    <!-- boxicons link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Css part link-->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylem.css">
+    <title>My Portfolio</title>
 </head>
 <body>
+    <!--header section-->
     <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
+        <a href="#"  class="logoname"><span>R</span>idmi.</a>
+                <!-- Logo -->
+        <img src="R I D M I.png" alt="Site Logo" class="logo">
+        <!--menu-box-->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle"/>
+        <label for="menu-toggle" class="menu-icon">&#9776;</label> <!-- Hamburger icon -->
+        
+        <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blogs.html">Blogs</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li class="active"><a href="#yy.html">Home</a></li>
+                <li><a href="#about.html">About</a></li>
+                <li><a href="#blogs.html">Blogs</a></li>
+                <li><a href="#contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Main Content Section -->
+    <section id="about" class="box"><!--Defines id and class for styling the section-->
+        <h2>About Me</h2>
+        <div class="about-content"><!--wrapper div for the content inside the about section-->
+        <div class="description"><!--description paragraph about myself-->
+        <p>
+            I am Sharadee Jayarathna, a dedicated first-year Computer Science student at IIT, University of Westminster. 
+            With a passion for technology and a strong foundation in programming and software development, I am enthusiastic about applying my skills to real-world challenges. 
+            My recent project involved designing a website focused on raising awareness about environmental sustainability, where I honed my abilities in web development, user interface design, and interactive feedback systems. 
+            I am eager to further develop my skills through practical experience and am committed to contributing effectively in a collaborative work environment.
+        </p>
+        </div>
+        <div class="contact-details">
+            <p>
+                <i class="fas fa-map-marker-alt"></i> No 22, Jayanthi Road,Ratnapura, Sri Lanka<br><!--Font awesome icon used for location-->
+                <i class="fas fa-envelope"></i> <a href="mailto:kawya.20233041@iit.ac.lk">kawya.20233041@iit.ac.lk</a><br><!--Font awesome icon used for email address-->
+                <i class="fas fa-phone-alt"></i> 0743577777<!--Font awesome icon used for mobile number-->
+            </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="box"><!--Defines id and class for styling the section-->
+        <h2>Skills</h2>
+        <div class="skills-container"><!--wrapper div for the content inside the skills section-->
+            <div class="skill-bar"><!--wrapper div for skill bars-->
+                <p>HTML</p><!--Label for the bar-->
+                <div class="bar"><!--background bar for the skill-->
+                    <div class="progress" style="width: 90%;"></div><!--Each skills progress bar, sttyled with inline width-->
+                </div>
+        
+            </div>
+            <div class="skill-bar">
+                <p>CSS</p>
+                <div class="bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+                
+            </div>
+            <div class="skill-bar">
+                <p>Java</p>
+                <div class="bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+               
+            </div>
+            <div class="skill-bar">
+                <p>Python</p>
+                <div class="bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+                
+            </div>
+            <div class="skill-bar">
+                <p>C</p>
+                <div class="bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+                
+            </div>
+            <div class="skill-bar">
+                <p>JavaScript</p>
+                <div class="bar">
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+               
+            </div>
+        </div>
+       
+        <!-- Projects Section -->
+<section id="projects" class="box">
+    <h2>Projects</h2>
+    <div class="projects-container"><!-- Project item wrapper with pictures and descriptions -->
+
+
+        <div class="project-item">
+            <img src="transactions.jpeg" alt="Project 1">
+            <p>Completed an individual Python project to take transactions from users.</p>
+        </div>
+        <div class="project-item">
+            <img src="finance tracker.jpeg" alt="Project 2">
+            <p>Developed a personal finance tracker program using Python and Tkinter for 
+                GUI.
+                </p>
+        </div>
+        <div class="project-item">
+            <img src="St.jpeg" alt="Project 3">
+            <p>Worked on a Java project to create a student management system for an 
+                institute for Software Development 2 module.
+                </p>
+        </div>
+        <div class="project-item">
+            <img src="life below water.jpeg" alt="Project 3">
+            <p> Developed a website using HTML, CSS and JavaScript as part of a group 
+                project for the Web Design and Development module
+                </p>
+        </div>
+    </div>
+</section>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education"><!--Defines id and classes for styling the education section-->
+        <h2 class="heading">Education</h2>
+        <div class="timeline-items"><!--wrapper div for timeline items.-->
+            <div class="timeline-item"><!--div for a single timeline item.-->
+                <div class="timeline-dot"></div><!--do on the timeline-->
+                <div class="timeline-date">2014-2022</div><!--date of the timeline event-->
+                <div class="timeline-content"><!--div for the timeline content-->
+                    <h3>School</h3>
+                    <p>I attended Ferguson High School from 2014 to 2022, where I completed my O-levels and A-levels.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2024-2028</div>
+                <div class="timeline-content">
+                    <h3>University</h3>
+                    <p>Currently studying Computer Science at the University of Westminster. The program focuses on advanced computing technologies and software development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--use id and classes for styling interests section-->
+    <section id="interests" class="box">
+        <h2>Interests</h2>
+        <ul><!--Use unorderd lists-->
+            <li>Gemology and Business : Completed a diploma in gemology</li>
+            <li>Badminton             : Active player at IIT</li>
+            <li>Designing Houses      : Enjoy creating architectural designs</li>
+            <li>Logo Designing        : Skilled in creating unique logos</li>
+        </ul>
+    </section>
+
+
+    <footer class="footer"><!--Include a link to my email address -->
+        <p>&copy; 2024-10-08.RIDMI. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
