@@ -1,153 +1,178 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins' , sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: #080808;
     color: #fff;
+    padding-top: 120px; /* Adjusted padding to accommodate fixed header */
 }
-a{
+
+/* Fixed header with logo on the left, nav-menu on the right, and logo name beside logo */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align logo left, nav-menu right */
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Container for logo and logo name */
+.logo-container {
+    display: flex;
+    align-items: center; /* Align logo and name vertically */
+}
+
+/* Logo styles */
+.logo {
+    height: 90px; /* Adjust the height of the logo image */
+    width: 90px;
+    margin-right: 100px; /* Space between the logo and the name */
+}
+
+/* Center the logo name beside the logo */
+.logoname {
     color: #fff;
     text-decoration: none;
-}
-.navbar{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    padding: 25px 9%;
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    z-index: 100;
-
-}
-.navbar .logo{
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 700;
 }
-.navbar ul li{
-    list-style: none;
-    margin-left: 35px;
-}
-.navbar ul li a{
-    font-size: 20px;
-    font-weight: 500;
-    transition: 5ms;
-}
-.navbar ul li:hover a,
-.navbar ul li.active a{
-    color: #7cf03d;
 
+.logoname span {
+    color: #ffae00; /* Accent color for part of the logo name */
 }
-/* Style the video */
-/*.header-video {
-    position:fixed;
-    top: 0;
-    left: 0;
-    width: 15%;
-    height: 10%;
-    object-fit:cover; /* Ensures the video covers the header space */
-/* Style the logo */
-.logo {
-    position:absolute;
-    top: 10px;
-    left: 10px;
-    padding-top: 0;
-    width: 150px; /* Adjust the logo size */
 
-}
-.home{
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    padding: 60px 9% 0;
+a {
+    text-decoration: none;
     color: #fff;
 }
-.home-info h1{
-    font-size: 55px;
-}
-.home-info h2{
-    font-size: 32px;
-    margin: 10px;
-}
-.home-info p{
-    font-size: 16px;
-    margin: 10px 0 25px;
-}
-.home-info .btn-social{
-    display: flex;
-    align-items: center;
-}
-.btn{
-    display: inline-block;
-    padding: 10px 30px;
-    background: #7cf03d;
-    border-radius: 40px;
-    box-shadow: 0 0 10px;
-    font-size: 16PX;
-    color: #1f242d;
-    font-weight: 600;
-    transition: 1s;
-}
-.btn:hover{
-    background-color: transparent;
-    color: #7cf03d;
-    box-shadow: none;
-}
-.home-info .btn-social .social a{
-    display: inline-flex;
-    padding: 8px;
-    border: 2px solid #7cf03d;
-    border-radius: 50px;
-    font-size: 20px;
-    color: #7cf03d;
-    margin: 0 8px;
-}
-.home-info .btn-social .social a:hover{
-    background-color: #7cf03d;
-    color: #1f242d;
-    box-shadow: 0 0 10px #7cf03d;
-}
-.home-img .img-box{
-    position: relative;
-    width: 32vw;
-    height: 32vw;
-    border-radius: 50%;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-/*annimation image*/
-.home-img .img-box::before,
-.home-img .img-box::after{
-    content: '';
+
+/* Menu icon styles */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
     position: absolute;
-    width: 500px;
-    height: 500px;
-    background: conic-gradient(transparent, transparent, transparent, #7cf03d);
+    right: 20px;
 }
-.home-img .img-box .img-item {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: #1f242d;
-    border-radius: 50%;
-    border: 1px solid #1f242d;
-    display: flex;
-    justify-content: center;
-    z-index: 1;
-    overflow: hidden;
+
+/* Hide the checkbox input */
+.menu-toggle {
+    display: none;
 }
-.home-img .img-box .img-item img{
+
+/* Style the navigation menu */
+.nav-menu {
+    display: none; /* Hidden by default on small screens */
     position: absolute;
-    top: 30px;
+    top: 120px;
+    right: 0;
+    background-color: #333;
+    width: 100%; /* Full-width menu on small screens */
+    border-radius: 5px;
+    z-index: 100;
+}
+
+/* Show the menu when the checkbox is checked */
+.menu-toggle:checked + .menu-icon + .nav-menu {
     display: block;
-    width: 85%;
-    object-fit: cover;
-    mix-blend-mode: lighten;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Center the menu items */
+}
+
+.nav-menu li {
+    padding: 20px 0; /* Increase padding to make menu items larger */
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-size: 30px; /* Increase the font size */
+    font-weight: 600; /* Make the font bold */
+    transition: color 0.3s;
+}
+
+.nav-menu ul li:hover a,
+.nav-menu ul li.active a {
+    color: #7cf03d;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show the menu icon on small screens */
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-toggle:checked + .menu-icon + .nav-menu {
+        display: block; /* Show the nav menu when the menu icon is clicked */
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 120px; /* Dropdown below the header */
+        right: 0;
+        width: 100%; /* Full-width dropdown */
+        background-color: #333;
+        padding: 20px 0; /* Add padding around the entire menu */
+    }
+
+    .nav-menu ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .nav-menu li {
+        padding: 20px 0; /* Increase padding to make the items larger */
+    }
+
+    .nav-menu a {
+        font-size: 30px; /* Larger font size */
+        padding: 10px 20px; /* Add padding inside the links */
+    }
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 769px) {
+    .nav-menu {
+        display: flex; /* Show the menu as a flex container */
+        position: static; /* Remove absolute positioning */
+        background-color: transparent;
+        width: auto;
+    }
+
+    .nav-menu ul {
+        display: flex; /* Horizontal layout */
+    }
+
+    .nav-menu li {
+        padding: 15px 20px;
+    }
+
+    .nav-menu a {
+        display:inline ;
+    }
+
+    .menu-icon {
+        display: none; /* Hide the menu icon on larger screens */
+    }
 }
