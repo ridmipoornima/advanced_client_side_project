@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- boxicons link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Css part link-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylec.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <!--header section-->
+    <header>
+        <a href="#"  class="logoname"><span>R</span>idmi.</a>
+                <!-- Logo -->
+        <img src="R I D M I.png" alt="Site Logo" class="logo">
+        <!--menu-box-->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle"/>
+        <label for="menu-toggle" class="menu-icon">&#9776;</label> <!-- Hamburger icon -->
+        
+        <nav class="nav-menu">
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <p>If you have any questions or would like to work with me, feel free to get in touch!</p>
+            
+            <form action="submit_form.php" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>SOCIAL ME</h3>
+                <ul>
+                    <li><a href="https://github.com/ridmipoornima"><i class='bx bxl-github'></i></a>GitHub</li>
+                    <li><a href="https://www.linkedin.com/feed/?trk=404_page"><i class='bx bxl-linkedin' >Linkedin</i></a></li>
+                    <li><a href="#"><i class='bx bxl-facebook' ></i></a>FaceBook</li>
+                    <li><a href="#"><i class='bx bxl-instagram'></i></a>Instagram</li>
+                    <li><a href="#"><i class='bx bxl-twitter'>Twitter</i></a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>ABOUT ME</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy;2009-2024 Your Name Powered by Eleventy, Netlify, and more</p>
+            <a href="#top">To the top ↑</a>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+</body>
+</html>
