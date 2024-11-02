@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="R I D M I.png" alt="Portfolio Logo">
+            </div>
+            <h1 class="logoname">Port<span>folio</span></h1>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+        <!-- Main Content Section -->
+    <section id="about" class="box"><!--Defines id and class for styling the section-->
+        <h2 class="abh2" style="text-align: center;">About Me</h2>
+        <div class="about-content"><!--wrapper div for the content inside the about section-->
+        <div class="description"><!--description paragraph about myself-->
+        <p>
+            I am Ridmi Poornima, a dedicated Second-year Computer Science student at IIT, University of Westminster. 
+            I am very interested in technology and have a solid background in programming and software development.
+            I am about the application of technical skills in real-world projects. 
+            I also designed a mobile application to inculcate the habit of environment-friendly behavior 
+            in people by measuring their carbon footprint, finding alternatives for products, and even taking up 
+            community challenges for environmental change. The project really set in place my understanding of mobile development, 
+            data analytics, and API integration. I just look forward to continuing to build practical skills through 
+            real-world applications and team collaborations that focus on impactful solutions.
+        </p>
+        </div>
+        <div class="contact-details">
+            <p>
+                <i class='bx bx-map'></i> No 123, Mathugama Road,pelawaththa, Sri Lanka<br><!--Font awesome icon used for location-->
+                <i class='bx bx-envelope'></i> <a href="mailto:ridmi.20232563@iit.ac.lk">ridmi.20232563@iit.ac.lk</a><br><!--Font awesome icon used for email address-->
+                <i class='bx bx-phone'></i> +94 78 777 8722<!--Font awesome icon used for mobile number-->
+            </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="box"><!--Defines id and class for styling the section-->
+        <h2 class="abh2" style="text-align: center;">Technical Skills</h2>
+        <div class="skills-container"><!--wrapper div for the content inside the skills section-->
+            <div class="skill-bar"><!--wrapper div for skill bars-->
+                <div class="lg"><i class='bx bxl-html5'></i></div>
+                <span>HTML</span>
+                <div class="bar"><!--background bar for the skill-->
+                    <div class="progress" style="width: 90%;"></div><!--Each skills progress bar, sttyled with inline width-->
+                </div>
+        
+            </div>
+            <div class="skill-bar">
+                <div class="lg"><i class='bx bxl-css3'></i></div>
+                <p>CSS</p>
+                <div class="bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+                
+            </div>
+            <div class="skill-bar">
+                <div class="lg"><i class='bx bxl-java'></i></div>
+                <p>Java</p>
+                <div class="bar">
+                    <div class="progress" style="width: 75%;"></div>
+                </div>
+               
+            </div>
+            <div class="skill-bar">
+                <div class="lg"><i class='bx bxl-python'></i></div>
+                <p>Python</p>
+                <div class="bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+                
+            </div>
+            <div class="skill-bar">
+                <div class="lg"><i class='bx bxl-c-plus-plus'></i></div>
+                <p>C++</p>
+                <div class="bar">
+                    <div class="progress" style="width: 40%;"></div>
+                </div>
+                
+            </div>
+            <div class="skill-bar">
+                <div class="lg"><i class='bx bxl-javascript'></i></div>
+                <p>JavaScript</p>
+                <div class="bar">
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+               
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <a href="#" class="to-top">
+                <span style="color:rgb(128, 197, 128); text-align: center;"> to-top</span>
+                <span >↑</span>
+            </a>
+            </div>
+        </section>
+       
+       
+
+    <!-- Education Section -->
+    <section id="education" class="box"<!--Defines id and classes for styling the education section-->
+        <h2 class="abh2" class="heading" style="text-align: center;">Education</h2>
+        <div class="timeline-items"><!--wrapper div for timeline items.-->
+            <div class="timeline-item"><!--div for a single timeline item.-->
+                <div class="timeline-dot"></div><!--do on the timeline-->
+                <div class="timeline-date">2006-2020</div><!--date of the timeline event-->
+                <div class="timeline-content"><!--div for the timeline content-->
+                    <h3 class="edu">School</h3>
+                    <p>I attended C.W.W.Kannangara M.V from 2006 to 2020, where I completed my O-levels and A-levels.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2024-2028</div>
+                <div class="timeline-content">
+                    <h3 class="edu">University</h3>
+                    <p>Currently studying Computer Science at the University of Westminster. The program focuses on advanced computing technologies and software development.</p>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center;">
+        <a href="#" class="to-top">
+            <span style="color:rgb(128, 197, 128); text-align: center;"> to-top</span>
+            <span >↑</span>
+        </a>
+        </div>
+    </section>
+    
+    <!--use id and classes for styling interests section-->
+    <section id="interests" class="box" style="text-align: center;">
+        <h2 class="abh2">Interests</h2>
+        <div>
+            <ul><!--Use unorderd lists-->
+                <li>Logo Designing        : Skilled in creating unique logos</li>
+                <li>Playing               : Skilled in playing Netball</li>
+                <li>UX/UI Designing        : Following UX/UI design coures</li>
+            </ul>
+            <div style="text-align: center;">
+            <a href="#" class="to-top">
+                <span style="color:rgb(128, 197, 128); text-align: center;"> to-top</span>
+                <span >↑</span>
+            </a>
+            </div>
+    </section>
+    </main>
+
+
+
+
+
+
+
+<!--footer section-->
+    <footer class="footer-container">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>RP Creation</h3>
+                    <p>Creating amazing digital experiences with innovation and creativity.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/ridmipoornima"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.linkedin.com/feed/"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a> 
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="quick-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="project.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <div>
+                            <i class='bx bx-envelope'></i>
+                            <span>ridmi.20232563@iit.ac.lk</span>
+                        </div>
+                        <div>
+                            <i class='bx bx-phone'></i>
+                            <span>+94 78 777 8722</span>
+                        </div>
+                        <div>
+                            <i class='bx bx-map'></i>
+                            <span>123, Mathugama Road, pelawaththa.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates and insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ridmi. All rights reserved.</p>
+                <a href="#" class="to-top">
+                    <span class="long-text">To the top </span>
+                    <span class="short-text">up</span>
+                    <span class="arrow">↑</span>
+                </a>
+            </div>
+        </div>
+    </footer>
