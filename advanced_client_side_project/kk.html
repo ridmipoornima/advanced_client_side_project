@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation</title>
+    <!-- boxicons link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styl.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #1f242d;
+            min-height: 100vh;
+            padding-top: 120px;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            animation: show-content 1s ease forwards;
+        }
+
+        @keyframes show-content {
+            from {
+                opacity: 0;
+                visibility: hidden;
+            }
+            to {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        .logo-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .logoname {
+            color: #fff;
+            text-decoration: none;
+            font-size: 50px;
+            font-weight: 700;
+        }
+
+        .logoname span {
+            color: #ffae00;
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            display: none;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .nav-menu {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background-color: transparent;
+        }
+
+        .nav-menu ul {
+            list-style-type: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu .active a {
+            color: #ffae00;
+        }
+
+        .nav-menu a:hover {
+            color: #7cf03d;
+            font-size: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #1f242d;
+            min-height: 100vh;
+            padding-top: 120px;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            animation: show-content 1s ease forwards;
+        }
+
+        @keyframes show-content {
+            from {
+                opacity: 0;
+                visibility: hidden;
+            }
+            to {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        .logo-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .logoname {
+            color: #fff;
+            text-decoration: none;
+            font-size: 50px;
+            font-weight: 700;
+        }
+
+        .logoname span {
+            color: #ffae00;
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            display: none;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .nav-menu {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background-color: transparent;
+        }
+
+        .nav-menu ul {
+            list-style-type: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu .active a {
+            color: #ffae00;
+        }
+
+        .nav-menu a:hover {
+            color: #7cf03d;
+            font-size: 20px;
+        }
+
+
+        .home{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: #fff;
+}
+.home-info h1{
+    font-size: 55px;
+}
+.home-info h2{
+    font-size: 32px;
+    margin: 10px;
+}
+.home-info p{
+    font-size: 16px;
+    margin: 10px 0 25px;
+}
+.home-info .btn-social{
+    display: flex;
+    align-items: center;
+}
+.btn-all{
+    padding: 20px;
+}
+.btn{
+    background-color: transparent;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 30px;
+    background: #7cf03d;
+    border-radius: 40px;
+    box-shadow: 0 0 10px;
+    font-size: 16PX;
+    color: #1f242d;
+    font-weight: 600;
+    transition: 1s;
+}
+.btn:hover{
+    background-color: transparent;
+    color: #7cf03d;
+    box-shadow:#fff;
+    
+}
+.btn-two{
+    background-color: transparent;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 30px;
+    background:#ffae00;
+    border-radius: 40px;
+    box-shadow: 0 0 10px;
+    font-size: 16PX;
+    color: #1f242d;
+    font-weight: 600;
+    transition: 1s;
+}
+.btn-two:hover{
+    background-color: transparent;
+    color: #7cf03d;
+    box-shadow:#fff;
+}
+.home-info .social a{
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid #7cf03d;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #7cf03d;
+    margin: 0 8px;
+}
+.home-info .social a:hover{
+    background-color: #7cf03d;
+    color: #1f242d;
+    box-shadow: 0 0 10px #7cf03d;
+}
+.home-img .img-box{
+    position: relative;
+    width: 32vw;
+    height: 32vw;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+/*annimation image*/
+.home-img .img-box::before,
+.home-img .img-box::after{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: conic-gradient(transparent, transparent, transparent, #7cf03d);
+}
+.home-img .img-box .img-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #1f242d;
+    border-radius: 50%;
+    border: 1px solid #1f242d;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+}
+.home-img .img-box .img-item img{
+    position: absolute;
+    top: 30px;
+    display: block;
+    width: 85%;
+    object-fit: cover;
+    mix-blend-mode: lighten;
+}
+.bars-animation{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: -1;
+}
+
+.bars-animation .bar {
+    width: 100%;
+    height: 100%;
+    background: #1f242d;
+    border: 2px solid red;
+    transform: translateY(-100%);
+}
+
+        
+
+        /* Desktop (1920px and above) */
+        @media screen and (min-width: 1920px) {
+            header {
+                height: 140px;
+            }
+            .logo {
+                height: 120px;
+                width: 120px;
+                left: 40px;
+            }
+            .logoname {
+                font-size: 60px;
+            }
+            .nav-menu a {
+                font-size: 22px;
+            }
+            .nav-menu ul {
+                gap: 3rem;
+            }
+        }
+
+        /* Laptop (1366px to 1919px) */
+        @media screen and (min-width: 1366px) and (max-width: 1919px) {
+            header {
+                height: 120px;
+            }
+            .logo {
+                height: 100px;
+                width: 100px;
+                left: 30px;
+            }
+            .logoname {
+                font-size: 50px;
+            }
+            .nav-menu a {
+                font-size: 18px;
+            }
+            .nav-menu ul {
+                gap: 2.5rem;
+            }
+            .home {
+                padding: 40px 5%;
+            }
+            .home-info h1 {
+                font-size: 2.8rem;
+            }
+            .home-info h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Tablets & Small Laptops (768px to 1365px) */
+        @media screen and (min-width: 768px) and (max-width: 1365px) {
+            header {
+                height: 100px;
+            }
+            .logo {
+                height: 80px;
+                width: 80px;
+                left: 20px;
+            }
+            .logoname {
+                font-size: 40px;
+            }
+            .nav-menu a {
+                font-size: 16px;
+            }
+            .nav-menu ul {
+                gap: 2rem;
+            }
+        }
+
+        /* Large Phones (481px to 767px) */
+        @media screen and (min-width: 481px) and (max-width: 767px) {
+            header {
+                height: 90px;
+            }
+            .logo {
+                height: 70px;
+                width: 70px;
+                left: 15px;
+            }
+            .logoname {
+                font-size: 32px;
+            }
+            .menu-icon {
+                display: block;
+            }
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 90px;
+                right: 0;
+                background-color: #333;
+                width: 100%;
+                max-width: 300px;
+                border-radius: 0 0 5px 5px;
+                padding: 1rem;
+            }
+            .menu-toggle:checked + .menu-icon + .nav-menu {
+                display: block;
+            }
+            .nav-menu ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .nav-menu li {
+                text-align: center;
+            }
+        }
+
+        /* Small Phones (320px to 480px) */
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+            header {
+                height: 80px;
+                padding: 10px;
+            }
+            .logo {
+                height: 60px;
+                width: 60px;
+                left: 10px;
+            }
+            .logoname {
+                font-size: 24px;
+            }
+            .menu-icon {
+                display: block;
+                font-size: 24px;
+            }
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 80px;
+                right: 0;
+                background-color: #333;
+                width: 100%;
+                max-width: 250px;
+                border-radius: 0 0 5px 5px;
+                padding: 0.8rem;
+            }
+            .menu-toggle:checked + .menu-icon + .nav-menu {
+                display: block;
+            }
+            .nav-menu ul {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .nav-menu li {
+                text-align: center;
+            }
+            .nav-menu a {
+                font-size: 16px;
+            }
+        }
+
+        /* iPhone SE and smaller devices */
+        @media screen and (max-width: 319px) {
+            header {
+                height: 70px;
+                padding: 8px;
+            }
+            .logo {
+                height: 50px;
+                width: 50px;
+                left: 8px;
+            }
+            .logoname {
+                font-size: 20px;
+            }
+            .menu-icon {
+                display: block;
+                font-size: 20px;
+                right: 15px;
+            }
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                right: 0;
+                background-color: #333;
+                width: 100%;
+                max-width: 100%; /* Changed to full width for better visibility */
+                border-radius: 0 0 5px 5px;
+                padding: 0.6rem;
+            }
+            .menu-toggle:checked + .menu-icon + .nav-menu {
+                display: block;
+            }
+            .nav-menu ul {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .nav-menu li {
+                text-align: center;
+            }
+            .nav-menu a {
+                font-size: 14px;
+                display: block;
+                padding: 8px 0;
+            }
+            }
+            .home-info h1 {
+                font-size: 1.8rem;
+            }
+            .home-info h2 {
+                font-size: 1.3rem;
+            }
+            .home-info p {
+                font-size: 0.9rem;
+            }
+            .btn, .btn-two {
+                padding: 8px 20px;
+                font-size: 0.8rem;
+            }
+            .social a {
+                width: 35px;
+                height: 35px;
+            }
+            .social i {
+                font-size: 1.2rem;
+            }
+        }
+.home-img .img-box{
+    position: relative;
+    width: 32vw;
+    height: 32vw;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+/*annimation image*/
+.home-img .img-box::before,
+.home-img .img-box::after{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: conic-gradient(transparent, transparent, transparent, #7cf03d);
+}
+.home-img .img-box .img-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #1f242d;
+    border-radius: 50%;
+    border: 1px solid #1f242d;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+}
+.home-img .img-box .img-item img{
+    position: absolute;
+    top: 30px;
+    display: block;
+    width: 85%;
+    object-fit: cover;
+    mix-blend-mode: lighten;
+}
+.bars-animation{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: -1;
+}
+
+.bars-animation .bar {
+    width: 100%;
+    height: 100%;
+    background: #1f242d;
+    border: 2px solid red;
+    transform: translateY(-100%);
+}
+
+        
+
+        /* Desktop (1920px and above) */
+        @media screen and (min-width: 1920px) {
+            header {
+                height: 140px;
+            }
+            .logo {
+                height: 120px;
+                width: 120px;
+                left: 40px;
+            }
+            .logoname {
+                font-size: 60px;
+            }
+            .nav-menu a {
+                font-size: 22px;
+            }
+            .nav-menu ul {
+                gap: 3rem;
+            }
+        }
+
+        /* Laptop (1366px to 1919px) */
+        @media screen and (min-width: 1366px) and (max-width: 1919px) {
+            header {
+                height: 120px;
+            }
+            .logo {
+                height: 100px;
+                width: 100px;
+                left: 30px;
+            }
+            .logoname {
+                font-size: 50px;
+            }
+            .nav-menu a {
+                font-size: 18px;
+            }
+            .nav-menu ul {
+                gap: 2.5rem;
+            }
+            .home {
+                padding: 40px 5%;
+            }
+            .home-info h1 {
+                font-size: 2.8rem;
+            }
+            .home-info h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Tablets & Small Laptops (768px to 1365px) */
+        @media screen and (min-width: 768px) and (max-width: 1365px) {
+            header {
+                height: 100px;
+            }
+            .logo {
+                height: 80px;
+                width: 80px;
+                left: 20px;
+            }
+            .logoname {
+                font-size: 40px;
+            }
+            .nav-menu a {
+                font-size: 16px;
+            }
+            .nav-menu ul {
+                gap: 2rem;
+            }
+        }
+
+        /* Large Phones (481px to 767px) */
+        @media screen and (min-width: 481px) and (max-width: 767px) {
+            header {
+                height: 90px;
+            }
+            .logo {
+                height: 70px;
+                width: 70px;
+                left: 15px;
+            }
+            .logoname {
+                font-size: 32px;
+            }
+            .menu-icon {
+                display: block;
+            }
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 90px;
+                right: 0;
+                background-color: #333;
+                width: 100%;
+                max-width: 300px;
+                border-radius: 0 0 5px 5px;
+                padding: 1rem;
+            }
+            .menu-toggle:checked + .menu-icon + .nav-menu {
+                display: block;
+            }
+            .nav-menu ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .nav-menu li {
+                text-align: center;
+            }
+        }
+
+        /* Small Phones (320px to 480px) */
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+            header {
+                height: 80px;
+                padding: 10px;
+            }
+            .logo {
+                height: 60px;
+                width: 60px;
+                left: 10px;
+            }
+            .logoname {
+                font-size: 24px;
+            }
+            .menu-icon {
+                display: block;
+                font-size: 24px;
+            }
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 80px;
+                right: 0;
+                background-color: #333;
+                width: 100%;
+                max-width: 250px;
+                border-radius: 0 0 5px 5px;
+                padding: 0.8rem;
+            }
+            .menu-toggle:checked + .menu-icon + .nav-menu {
+                display: block;
+            }
+            .nav-menu ul {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .nav-menu li {
+                text-align: center;
+            }
+            .nav-menu a {
+                font-size: 16px;
+            }
+        }
+
+        /* iPhone SE and smaller devices */
+        @media screen and (max-width: 319px) {
+            header {
+                height: 70px;
+                padding: 8px;
+            }
+            .logo {
+                height: 50px;
+                width: 50px;
+                left: 8px;
+            }
+            .logoname {
+                font-size: 20px;
+            }
+            .menu-icon {
+                display: block;
+                font-size: 20px;
+                right: 15px;
+            }
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                right: 0;
+                background-color: #333;
+                width: 100%;
+                max-width: 100%; /* Changed to full width for better visibility */
+                border-radius: 0 0 5px 5px;
+                padding: 0.6rem;
+            }
+            .menu-toggle:checked + .menu-icon + .nav-menu {
+                display: block;
+            }
+            .nav-menu ul {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .nav-menu li {
+                text-align: center;
+            }
+            .nav-menu a {
+                font-size: 14px;
+                display: block;
+                padding: 8px 0;
+            }
+            }
+            .home-info h1 {
+                font-size: 1.8rem;
+            }
+            .home-info h2 {
+                font-size: 1.3rem;
+            }
+            .home-info p {
+                font-size: 0.9rem;
+            }
+            .btn, .btn-two {
+                padding: 8px 20px;
+                font-size: 0.8rem;
+            }
+            .social a {
+                width: 35px;
+                height: 35px;
+            }
+            .social i {
+                font-size: 1.2rem;
+            }
+            
+    </style>
+</head>
+<body>
+     <!--header section-->
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="R I D M I.png" alt="Portfolio Logo">
+            </div>
+            <h1 class="logoname">Port<span>folio</span></h1>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blogs.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--home section-->
+    <section class="home">
+        <div class="home-info">
+              <h1>Ridmi Poornima</h1>
+              <h2>I'm a<span class="animated-text">computer science student</span></h3><!--This is a secondary heading and introduces an animated text effect to show the role of the user.--></h2>
+              <p>I'm a second year student at IIT .My academic journey has sparked my interest in web development, allowing me to work on various projects.<!--The short bio-->
+              I enjoy exploring new coding languages, solving complex problems, and staying updated with the latest advancements in tech.
+              In my endeavors to make it real, a strong background in  HTML5, and CSS3 forms the basis of my work while making dynamic and responsive websites. 
+              Since I am curious about learning and developing, improving my abilities, and working on valuable projects, I always research the newest technologies and trends in web development.
+              </p>
+              <div class="btn-all">
+                <a href="my_cv.pdf" class="btn">Download CV</a>
+                <a href="#" class="btn-two">Hire Me Now</a>
+            </div>
+                <div class="social">
+                    <p><b>Check out my:</b></p>
+                    <a href="https://github.com/ridmipoornima"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/feed/?trk=404_page"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="#"><i class='bx bxl-facebook' ></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a> 
+                </div>
+         </div>
+        </div>
+
+            <div class="home-img">
+                <div class="img-box">
+                    <div class="img-item">
+                        <img src="ridmiR.jpg" alt="myphoto">
+                        <div class="bar-anim">
+                            <div class="bar" style="--i:1"></div>
+                            <div class="bar" style="--i:2"></div>
+                            <div class="bar" style="--i:3"></div>
+                            <div class="bar" style="--i:4"></div>
+                            <div class="bar" style="--i:5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+</body>
+</html>
