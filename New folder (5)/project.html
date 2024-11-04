@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential meta tags for character encoding and responsive viewport -->
+    <meta charset="UTF-8"><!--Theviewportmetataginstructsthebrowser
+    onhowtoscaleanddisplaythepageondifferentdevices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio</title><!--Responsivedesignisanapproachtowebdesignaimedat
+    craftingwebsitesthatprovideanoptimalviewingandinteraction
+    experienceacrossawiderangeofdevices(desktops,laptops,tablets,
+    andsmartphones-->
+    
+    <!-- External Resource Links -->
+    <!-- BoxIcons CSS for social media and UI icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Fonts - Poppins with multiple weights -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Semantic elements in HTML5 are elements that have specific meanings and roles in
+ the structure of a web page. They provide context to both the browser and the developer about
+ the content within them.-->
+    <!-- Header Section - Contains logo and navigation--**Defines the header section of a page. -->
+    <header>
+        <div class="logo-container">
+            <!-- Logo Image Container -->
+            <div class="logo">
+                <!-- IMPROVEMENT: Add width and height attributes to prevent layout shift -->
+                <img src="RIDMI.png" alt="Portfolio Logo">
+            </div>
+            <!-- Portfolio Text Logo -->
+            <h1 class="logoname">Port<span>folio</span></h1>
+            
+            <!-- Mobile Navigation Menu Toggle -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
+            
+            <!-- Main Navigation Menu ***nav-Defines a block of navigation links. -->
+            <nav class="nav-menu">
+                <!-- IMPROVEMENT: Add aria-label="Main navigation" -->
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Projects Section -->
+        <section id="projects">
+            <!-- Section Title -->
+            <!-- IMPROVEMENT: Move inline styles to CSS file -->
+            <h1 class="pm" style="text-align: center; color:aliceblue; font-size: 40px;">
+                M<span style="color: #c67f00">y</span> 
+                P<span style="color: #c67f00">rojects..</span>
+                <span style="color:aliceblue">...</span>
+            </h1>
+            <!-- Spacing breaks -->
+            <!-- IMPROVEMENT: Use CSS margins instead of <br> tags -->
+            <br><br><br>
+            
+            <!-- Projects Grid Container -->
+            <div class="projects-grid">
+                <!-- Project Card 1: Java Calculator -->
+                <article class="project-card">
+                    <!-- Project Image -->
+                    <!-- IMPROVEMENT: Add loading="lazy" for better performance -->
+                    <img src="jvcal.jpg" alt="Java Calculator Interface" class="project-image">
+                    <h3 class="ph3">Java Calculator</h3>
+                    <p class="pp">A sophisticated calculator application built with Java Swing, featuring scientific calculations, unit conversions, and a history log.</p>
+                    
+                    <!-- Technology Tags -->
+                    <div class="tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Swing</span>
+                        <span class="tag">Desktop App</span>
+                    </div>
+                    
+                    <!-- Project Timeline -->
+                    <!-- IMPROVEMENT: Use more semantic time element structure -->
+                    <time datetime="2024-12-25T10:00:00" class="highlight">
+                        May 25, 2024 at 10:00 AM
+                    </time>
+                    <!-- IMPROVEMENT: Move inline style to CSS -->
+                    <p style="color: black;">Duration: <time datetime="PT3H">6 hours</time></p>
+                </article>
+
+                <!-- Project Card 2: Finance Tracker  ***<article>- Defines an independent, self-contained piece of content. &  <aside>: Defines content related to the main content but can be considered separate.-->
+                <article class="project-card">
+                    <!-- IMPROVEMENT: Add width and height attributes -->
+                    <img src="pft.webp" alt="Finance Tracker Dashboard" class="project-image">
+                    <h3 class="ph3">Python Personal Finance Tracker</h3>
+                    <p class="pp">A comprehensive financial management system that helps track expenses, create budgets, and visualize spending patterns using Python and SQLite.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                    </div>
+                    <time datetime="2024-12-25T10:00:00" class="highlight">
+                        April 29, 2024 at 1:00 PM
+                    </time>
+                    <p style="color: black;">Duration: <time datetime="PT3H">360 hours</time></p>
+                </article>
+
+                <!-- Project Card 3: University Management System -->
+                <article class="project-card">
+                    <img src="ums.jpg" alt="University Management System" class="project-image">
+                    <h3 class="ph3">University Management System</h3>
+                    <p class="pp">A Java-based system for managing university operations including student enrollment, course management, and grade tracking.</p>
+                    <div class="tags">
+                        <span class="tag">Java</span>
+                    </div>
+                    <time datetime="2024-12-25T10:00:00" class="highlight">
+                        July 10, 2024 at 1:00 PM
+                    </time>
+                    <p style="color: black;">Duration: <time datetime="PT3H">360 hours</time></p>
+                </article>
+
+                <!-- Project Card 4: Health Website -->
+                <article class="project-card">
+                    <img src="hw.jpg" alt="Health and Wellbeing Website" class="project-image">
+                    <h3 class="ph3">Good Health & Well-being Website</h3>
+                    <p class="pp">A responsive website promoting healthy lifestyle choices, featuring fitness tracking, nutrition guides, and mental wellness resources.</p>
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Responsive Design</span>
+                    </div>
+                    <time datetime="2024-12-25T10:00:00" class="highlight">
+                        July 18, 2024 at 1:00 PM
+                    </time>
+                    <p style="color: black;">Duration: <time datetime="PT3H">360 hours</time></p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section ***<footer>: Defines the footer section of a page.-->
+    <footer class="footer-container">
+        <div class="footer-content">
+            <!-- Footer Grid Layout -->
+            <div class="footer-grid">
+                <!-- Company Information Section -->
+                <div class="footer-section">
+                    <h3>RP Creation</h3>
+                    <p>Creating amazing digital experiences with innovation and creativity.</p>
+                    <!-- Social Media Links -->
+                    <!-- IMPROVEMENT: Add rel="noopener noreferrer" for security -->
+                    <div class="social-links">
+                        <a href="https://github.com/ridmipoornima"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.linkedin.com/feed/"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://web.facebook.com/profile.php?id=100085312154767"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.instagram.com/ridmi_poornima_/"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://x.com/Ridmipoornima"><i class='bx bxl-twitter'></i></a> 
+                    </div>
+                </div>
+
+                <!-- Quick Navigation Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="quick-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="project.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <div>
+                            <i class='bx bx-envelope'></i>
+                            <span>ridmi.20232563@iit.ac.lk</span>
+                        </div>
+                        <div>
+                            <i class='bx bx-phone'></i>
+                            <span>+94 78 777 8722</span>
+                        </div>
+                        <div>
+                            <i class='bx bx-map'></i>
+                            <span>123, Mathugama Road, pelawaththa.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter Subscription -->
+                <!-- IMPROVEMENT: Add form validation and CSRF protection -->
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates and insights.</p>
+                    <form class="newsletter-input" action="mailto:eparidmi@gmail.com" method="POST" autocomplete="off">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ridmi. All rights reserved.</p>
+                <!-- Back to Top Link -->
+                <a href="#" class="to-top">
+                    <span class="long-text">To the top </span>
+                    <span class="short-text">up</span>
+                    <span class="arrow">↑</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

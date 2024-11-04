@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Document metadata and resource imports -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio</title>
+    <!-- External resource imports -->
+    <!-- Boxicons for social media and UI icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Fonts - Poppins family -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header section with navigation -->
+    <header>
+        <div class="logo-container">
+            <!-- Logo and site title -->
+            <div class="logo">
+                <img src="RIDMI.png" alt="Portfolio Logo">
+            </div>
+            <h1 class="logoname">Port<span>folio</span></h1>
+            
+            <!-- Mobile menu toggle -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
+            
+            <!-- Main navigation menu -->
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Home section with personal introduction -->
+        <section class="home">
+            <!-- Personal information and introduction -->
+            <div class="home-info">
+                <h1><span style="color: #ffae00;">R</span>idmi <span style="color: #ffae00;">P</span>oornima</h1>
+                <!-- Dynamic text animation for role -->
+                <h2>I'm a <span class="animated-text"> computer science student</span></h2>
+                <!-- Personal description -->
+                <p>
+                    I'm a second year student at IIT. My academic journey has sparked my interest in web development, allowing me to work on various projects.
+                    A passionate learner of new coding languages, solving complex problems, and keeping updated about the current trends in technology. 
+                    With a strong foundation in both HTML5 and CSS3, I focus on building responsive dynamic websites. 
+                    Always keen to improve my skills and further innovations in web development.
+                </p>
+                
+                <!-- CV download button -->
+                <div class="btn-all">
+                    <a href="my_cv.pdf" class="btn">Download CV</a>
+                </div>
+                
+                <!-- Social media links -->
+                <div class="social">
+                    <p><b>Check out my:</b></p>
+                    <a href="https://github.com/ridmipoornima"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/feed/"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=100085312154767"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/ridmi_poornima_/"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://x.com/Ridmipoornima"><i class='bx bxl-twitter'></i></a> 
+                </div>
+            </div>
+
+            <!-- Profile image section -->
+            <div class="home-img">
+                <div class="img-box">
+                    <div class="img-item">
+                        <img src="ridmiR.jpg" alt="my photo">
+                        <!-- Decorative bars animation -->
+                        <div class="bar-anim">
+                            <div class="barh" style="--i:1"></div>
+                            <div class="barh" style="--i:2"></div>
+                            <div class="barh" style="--i:3"></div>
+                            <div class="barh" style="--i:4"></div>
+                            <div class="barh" style="--i:5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer class="footer-container">
+        <div class="footer-content">
+            <!-- Footer grid with multiple sections -->
+            <div class="footer-grid">
+                <!-- Brand section -->
+                <div class="footer-section">
+                    <h3>RP Creation</h3>
+                    <p>Creating amazing digital experiences with innovation and creativity.</p>
+                    <!-- Social media links repeated in footer -->
+                    <div class="social-links">
+                        <a href="https://github.com/ridmipoornima"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.linkedin.com/feed/?trk=404_page"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://web.facebook.com/profile.php?id=100085312154767"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.instagram.com/ridmi_poornima_/"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://x.com/Ridmipoornima"><i class='bx bxl-twitter'></i></a> 
+                    </div>
+                </div>
+
+                <!-- Quick navigation links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="quick-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="project.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact information -->
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <div>
+                            <i class='bx bx-envelope'></i>
+                            <span>ridmi.20232563@iit.ac.lk</span>
+                        </div>
+                        <div>
+                            <i class='bx bx-phone'></i>
+                            <span>+94 78 777 8722</span>
+                        </div>
+                        <div>
+                            <i class='bx bx-map'></i>
+                            <span>123, Mathugama Road, pelawaththa.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter subscription form -->
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates and insights.</p>
+                    <form class="newsletter-input" action="mailto:eparidmi@gmail.com" method="POST" autocomplete="off">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer bottom with copyright and back to top button -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ridmi. All rights reserved.</p>
+                <a href="#" class="to-top">
+                    <span class="long-text">To the top </span>
+                    <span class="short-text">up</span>
+                    <span class="arrow">↑</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

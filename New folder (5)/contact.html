@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Googel font use-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="RIDMI.png" alt="Portfolio Logo">
+            </div>
+            <h1 class="logoname">Port<span>folio</span></h1>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+          <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <p>If you have any questions or would like to work with me, feel free to get in touch!</p>
+            <form action="https://api.web3forms.com/submit" method="POST">
+            <form>
+                <input type="hidden" name="access_key" value="2290271e-c1c9-46f7-a348-ff44f4d2fe06">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="number">Number(Optional):</label>
+                    <input type="text" id="name" name="name" placeholder="Your Number" >
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+    
+    <footer class="footer-container">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>RP Creation</h3>
+                    <p>Creating amazing digital experiences with innovation and creativity.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/ridmipoornima"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.linkedin.com/feed/"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a> 
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="quick-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="project.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <div>
+                            <i class='bx bx-envelope'></i>
+                            <span>ridmi.20232563@iit.ac.lk</span>
+                        </div>
+                        <div>
+                            <i class='bx bx-phone'></i>
+                            <span>+94 78 777 8722</span>
+                        </div>
+                        <div>
+                            <i class='bx bx-map'></i>
+                            <span>123, Mathugama Road, pelawaththa.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates and insights.</p>
+                    <form class="newsletter-input" action="mailto:eparidmi@gmail.com" method="POST" autocomplete="off">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ridmi. All rights reserved.</p>
+                <a href="#" class="to-top">
+                    <span class="long-text">To the top </span>
+                    <span class="short-text">up</span>
+                    <span class="arrow">↑</span>
+                </a>
+            </div>
+        </div>
+    </footer>
